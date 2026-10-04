@@ -1,0 +1,22 @@
+name: Daily Intelligence Run
+on:
+  schedule:
+    - cron: '0 6 * * *' # 6am WAT daily
+  workflow_dispatch: # manual button
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install -r requirements.txt
+      - run: python main.py
+      - run: |
+          git config user.name "mrrmoh"
+          git config user.email "mohgarba00@gmail.com"
+          git add warehouse/
+          git commit -m "auto: daily intel update" || echo "no changes"
+          git push
