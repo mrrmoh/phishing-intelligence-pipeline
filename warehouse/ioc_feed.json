@@ -1,0 +1,72 @@
+[
+  {
+    "type": "url",
+    "value": "http://secure-login-facebook-verify.tk/login",
+    "brand": "Facebook",
+    "risk_score": 90,
+    "tld": "tk"
+  },
+  {
+    "type": "url",
+    "value": "http://nigeria-bank-verification.ml/auth",
+    "brand": "Generic",
+    "risk_score": 90,
+    "tld": "ml"
+  },
+  {
+    "type": "url",
+    "value": "http://dhl-delivery-track-id.ga/track",
+    "brand": "DHL",
+    "risk_score": 90,
+    "tld": "ga"
+  },
+  {
+    "type": "url",
+    "value": "http://microsoft-365-login-verify.cf/owa",
+    "brand": "Microsoft",
+    "risk_score": 90,
+    "tld": "cf"
+  },
+  {
+    "type": "url",
+    "value": "http://whatsapp-verification-code.tk/verify",
+    "brand": "Generic",
+    "risk_score": 90,
+    "tld": "tk"
+  },
+  {
+    "type": "url",
+    "value": "http://binance-secure-wallet.ml/login",
+    "brand": "Generic",
+    "risk_score": 90,
+    "tld": "ml"
+  },
+  {
+    "type": "url",
+    "value": "http://usps-tracking-update.ga/us",
+    "brand": "Generic",
+    "risk_score": 90,
+    "tld": "ga"
+  },
+  {
+    "type": "url",
+    "value": "http://apple-id-locked.cf/unlock",
+    "brand": "Generic",
+    "risk_score": 90,
+    "tld": "cf"
+  },
+  {
+    "type": "url",
+    "value": "http://gtbank-online-update.ml/login",
+    "brand": "GTBank",
+    "risk_score": 90,
+    "tld": "ml"
+  },
+  {
+    "type": "url",
+    "value": "http://paypal-limited-account.tk/resolve",
+    "brand": "Generic",
+    "risk_score": 90,
+    "tld": "tk"
+  }
+]
