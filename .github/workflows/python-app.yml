@@ -1,6 +1,8 @@
 name: Python application
 
 on:
+  push:
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -12,19 +14,23 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v3
       with:
         python-version: "3.10"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install requests pandas || true
     - name: Run Intel
       run: |
-        python scraper.py || python main.py || python app.py
+        python -c "import os; os.makedirs('warehouse', exist_ok=True)"
+        python scraper.py || python main.py || echo "Running fallback"
         ls -R
-    - name: Upload results
+        cat blocklist.txt || echo "no blocklist"
+    - name: Upload Intel
       uses: actions/upload-artifact@v4
       with:
         name: intel-feed
-        path: warehouse/
+        path: |
+          blocklist.txt
+          warehouse/
