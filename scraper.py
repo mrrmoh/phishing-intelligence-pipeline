@@ -8,7 +8,10 @@ def fetch_phishing_feed():
     Using public sample for demo - in prod replace with API
     """
     print("[1/3] Fetching phishing IOC feed...")
-
+    # Phishing Blocklist
+    # Source: Automated OSINT Pipeline
+    # Last Updated: 2026-10-05
+    # Total IOCs: 10
     # Using URLHaus recent payload as free source
     url = "https://urlhaus.abuse.ch/downloads/csv_recent/"
     try:
